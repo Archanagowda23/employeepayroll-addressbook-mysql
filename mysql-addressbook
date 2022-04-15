@@ -70,3 +70,38 @@ Query OK, 1 row affected (0.15 sec)
 mysql> insert into AddressBook(firstname,lastname,address,city,state,zip,phonenumber,email) values('jayanth','parmar','indore','abcd','pune',59876,918765456,'jayanth@gmail.com');
 Query OK, 1 row affected (2.58 sec)
 
+mysql> select * from AddressBook;
++-----------+----------+---------+---------------+-----------+--------+--------------+--------------------+
+| firstname | lastname | address | city          | state     | zip    | phonenumber  | email              |
++-----------+----------+---------+---------------+-----------+--------+--------------+--------------------+
+| archana   | gowda    | puttur  | managlore     | karnataka | 574328 | 917760973591 | archanar@gmail.com |
+| soupz     | konkani  | udupi   | kundapur      | mp        |  57878 |   9199999999 | soupz@gmail.com    |
+| prathik   | shetty   | nrpura  | chikmangalore | kerala    |  58767 |   9189765498 | prathik@gmail.com  |
+| jayanth   | parmar   | indore  | abcd          | pune      |  59876 |    918765456 | jayanth@gmail.com  |
++-----------+----------+---------+---------------+-----------+--------+--------------+--------------------+
+4 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//UC4 editing the existing contact by their firstname
+
+mysql>  update Addressbook set lastname='gowd' where firstname='archana';
+Query OK, 1 row affected (0.74 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Addressbook;
++-----------+----------+---------+---------------+-----------+--------+--------------+--------------------+
+| firstname | lastname | address | city          | state     | zip    | phonenumber  | email              |
++-----------+----------+---------+---------------+-----------+--------+--------------+--------------------+
+| archana   | gowd     | puttur  | managlore     | karnataka | 574328 | 917760973591 | archanar@gmail.com |
+| soupz     | konkani  | udupi   | kundapur      | mp        |  57878 |   9199999999 | soupz@gmail.com    |
+| prathik   | shetty   | nrpura  | chikmangalore | kerala    |  58767 |   9189765498 | prathik@gmail.com  |
+| jayanth   | parmar   | indore  | abcd          | pune      |  59876 |    918765456 | jayanth@gmail.com  |
++-----------+----------+---------+---------------+-----------+--------+--------------+--------------------+
+4 rows in set (0.03 sec)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
