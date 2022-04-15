@@ -53,3 +53,20 @@ mysql> desc AddressBook;
 | email       | varchar(100) | NO   |     | NULL    |       |
 +-------------+--------------+------+-----+---------+-------+
 8 rows in set (0.13 sec)
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+//UC3 inserting new Contacts to AddressBook table
+
+mysql> insert into AddressBook(firstname,lastname,address,city,state,zip,phonenumber,email) values('archana','gowda','puttur','managlore','karnataka',574328,917760973591,'archanar@gmail.com');
+Query OK, 1 row affected (0.55 sec)
+
+mysql> insert into AddressBook(firstname,lastname,address,city,state,zip,phonenumber,email) values('soupz','konkani','udupi','kundapur','mp',57878,9199999999,'soupz@gmail.com');
+Query OK, 1 row affected (0.62 sec)
+
+mysql> insert into AddressBook(firstname,lastname,address,city,state,zip,phonenumber,email) values('prathik','shetty','nrpura','chikmangalore','kerala',58767,9189765498,'prathik@gmail.com');
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into AddressBook(firstname,lastname,address,city,state,zip,phonenumber,email) values('jayanth','parmar','indore','abcd','pune',59876,918765456,'jayanth@gmail.com');
+Query OK, 1 row affected (2.58 sec)
+
