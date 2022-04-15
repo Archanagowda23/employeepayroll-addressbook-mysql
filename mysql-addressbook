@@ -210,3 +210,33 @@ mysql> select * from Addressbook where contacttype='friend';
 1 row in set (0.00 sec)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
+//UC10 ability to get count of contacts by contacttype
+
+mysql> select count(firstname) from Addressbook where contacttype='friend';
++------------------+
+| count(firstname) |
++------------------+
+|                1 |
++------------------+
+1 row in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+//UC11 ability to add person to friend and family
+
+mysql> update Addressbook set bookname ='shadowthrone',contacttype='family' where lastname='gowd';
+Query OK, 1 row affected (0.10 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Addressbook set bookname ='shadowthrone',contacttype='family' where lastname='shetty';
+Query OK, 1 row affected (0.15 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Addressbook;
++-----------+----------+---------+---------------+-----------+--------+--------------+--------------------+--------------+-------------+
+| firstname | lastname | address | city          | state     | zip    | phonenumber  | email              | bookname     | contacttype |
++-----------+----------+---------+---------------+-----------+--------+--------------+--------------------+--------------+-------------+
+| archana   | gowd     | puttur  | managlore     | karnataka | 574328 | 917760973591 | archanar@gmail.com | shadowthrone | family      |
+| soupz     | konkani  | udupi   | kundapur      | mp        |  57878 |   9199999999 | soupz@gmail.com    |              |             |
+| prathik   | shetty   | nrpura  | chikmangalore | kerala    |  58767 |   9189765498 | prathik@gmail.com  | shadowthrone | family      |
++-----------+----------+---------+---------------+-----------+--------+--------------+--------------------+--------------+-------------+
+3 rows in set (0.00 sec)
